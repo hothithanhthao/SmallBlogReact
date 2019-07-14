@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+// AddBlogForm will help you to add new blog 
+// by using the input form with Title, Tag, Content value.
 const AddBlogForm = props => {
 	const initialFormState = { id: null, title: '',date:'', tag:'', content: '' }
 	const [ blog, setBlog ] = useState(initialFormState)

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
+// EditBlogForm will help you to update your blog with the given form below.
 const EditBlogForm = props => {
   const [ blog, setBlog ] = useState(props.currentBlog)
 
@@ -9,8 +10,7 @@ const EditBlogForm = props => {
     },
     [ props ]
   )
-  // You can tell React to skip applying an effect if certain values haven’t changed between re-renders. [ props ]
-
+  
   const handleInputChange = event => {
     const { name, value } = event.target
 

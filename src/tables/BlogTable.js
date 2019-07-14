@@ -1,7 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 
-
+// BlogTable will show list of blogs with Title, Date Posted, Content, Tags as the table format 
+// You also can edit or delete blogs from this blog table
 const BlogTable = props => (
   <table>
     <thead>

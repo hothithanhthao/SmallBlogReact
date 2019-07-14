@@ -1,3 +1,5 @@
+
+//Function return the timestamp value when user add new blog
 export function getTimeStamp() {
     //Create the current date value
     var current_date = new Date()

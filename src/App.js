@@ -6,25 +6,26 @@ import {getTimeStamp} from './utils/TimeHelper'
 
 const App = ({blogs,setBlogs,addBlog}) => {
 	
+	//Define initial state for blog
 	const initialFormState = { id: null, title: "", date: "", tag:"", content: "" }
-
-	// Setting state
-	//const [ blogs, setBlogs ] = useState(blogsData)
 	const [ currentBlog, setCurrentBlog ] = useState(initialFormState)
 	const [ editing, setEditing ] = useState(false)
 
+	//deleteBlog will delete your blog 
 	const deleteBlog = id => {
 		setEditing(false)
 
 		setBlogs(blogs.filter(blog => blog.id !== id))
 	}
 
+	//update Blog will update new value for your blog
 	const updateBlog = (id, updatedBlog) => {
 		setEditing(false)
 
 		setBlogs(blogs.map(blog => (blog.id === id ? updatedBlog : blog)))
 	}
 
+	//editRow will edit the blog when you click Edit button
 	const editRow = blog => {
 		setEditing(true)
 

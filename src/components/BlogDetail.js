@@ -1,6 +1,6 @@
 import React from 'react'
 
-
+// BlogDetail will show Detail page with Title, Date Posted, Content and Tags.
 const BlogDetail = ({match,blogs}) => {
   const blog = blogs.find(p => p.title === match.params.title);
   
